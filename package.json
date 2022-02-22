@@ -1,0 +1,67 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npm run migrate:run && npm run start:server",
+    "start:server": "node dist/index -r dotenv/config",
+    "build": "babel src -s -D -d dist",
+    "dev": "nodemon .",
+    "migrate:run": "sequelize db:migrate",
+    "migrate:undo": "sequelize db:migrate:undo",
+    "migrate:undo:all": "sequelize db:migrate:undo:all",
+    "migration:create": "sequelize migration:create --name ",
+    "model:create": "sequelize model:create --name ",
+    "seed:create": "sequelize seed:create --name ",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "test": "babel --help"
+  },
+  "dependencies": {
+    "@babel/register": "^7.16.9",
+    "@babel/runtime": "^7.16.7",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.7.1",
+    "randomstring": "^1.2.2",
+    "sequelize": "^6.14.1",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-export-default-from": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-plugin-inline-dotenv": "^1.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matweqer/Learn-Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matweqer/Learn-Node/issues"
+  },
+  "homepage": "https://github.com/Matweqer/Learn-Node#readme"
+}

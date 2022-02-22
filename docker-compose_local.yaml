@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres:
+    restart: always
+    image: postgres:12-alpine
+    container_name: "learn-node"
+    env_file: ".env"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 4400:4400
+volumes:
+  pgdata:
